@@ -1,7 +1,7 @@
 <template>
-    <svg :width="width" :height="height" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg :width="width" :height="height" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
 
-        <polyline :points="myFinalPath" stroke="orange" fill="transparent"
+        <polyline points="0 0 50 0 50 50 100 50 50 50 50 100 0 100" stroke="orange" fill="transparent"
             stroke-width="5" />
     </svg>
 </template>

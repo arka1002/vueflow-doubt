@@ -5,7 +5,7 @@
                 <Card v-bind="props" />
             </template>
         </VueFlow> -->
-        <Random :height="200" :width="250" />
+        <Random :height="100" :width="100" />
     </div>
 </template>
 
