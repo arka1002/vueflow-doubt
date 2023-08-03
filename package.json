@@ -16,6 +16,7 @@
     "nuxt": "^3.6.5"
   },
   "dependencies": {
+    "@progress/kendo-drawing": "^1.17.5",
     "@vue-flow/core": "^1.22.2"
   }
 }

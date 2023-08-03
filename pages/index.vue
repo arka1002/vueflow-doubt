@@ -1,39 +1,27 @@
 <template>
     <div>
-        <VueFlow v-model="elements" :style="{ backgroundColor: 'lightblue' }">
+        <!-- <VueFlow v-model="elements" :style="{ backgroundColor: 'lightblue' }">
             <template #node-custom="props">
                 <Card v-bind="props" />
             </template>
-        </VueFlow>
+        </VueFlow> -->
+        <Random/>
     </div>
 </template>
 
 
 <script setup>
-import { VueFlow } from '@vue-flow/core'
 import { ref } from 'vue'
-import Card from "../components/Card.vue"
+import { geometry, Image, Surface, Path, Text, Group } from '@progress/kendo-drawing';
+const { Rect, Point, Size, transform } = geometry;
+import Random from "../components/Random.vue";
 
-
-const elements = ref([
-    {
-        id: '1',
-        type: 'custom',
-        data: { name: "QF1" },
-        position: { x: 0, y: 0 },
-    },
-    {
-        id: '2',
-        type: 'custom',
-        data: { name: "QF2" },
-        position: { x: 100, y: 0 },
-    },
-    {
-        id: 'e1-2',
-        source: '1',
-        target: '2',
-        sourceHandle: 'a',
+const path = new Path({
+    stroke: {
+        color: "#9999b6",
+        width: 2
     }
-])
+});
+
 
 </script>
