@@ -14,7 +14,7 @@ import { VueFlow } from '@vue-flow/core';
 import { ref } from 'vue';
 import Card from '../components/Card.vue';
 import '~/node_modules/@vue-flow/core/dist/style.css'
-
+import '~/node_modules/@vue-flow/core/dist/theme-default.css';
 const elements = ref([
     {
         id: '1',
