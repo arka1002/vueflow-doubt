@@ -1,27 +1,44 @@
 <template>
-    <div>
-        <!-- <VueFlow v-model="elements" :style="{ backgroundColor: 'lightblue' }">
+    <div :class="style.container">
+        <VueFlow v-model="elements" :style="{ backgroundColor: 'lightblue' }">
             <template #node-custom="props">
                 <Card v-bind="props" />
             </template>
-        </VueFlow> -->
-        <Random :height="100" :width="100" />
+        </VueFlow>
     </div>
 </template>
-
-
+  
 <script setup>
-import { ref } from 'vue'
-import { geometry, Image, Surface, Path, Text, Group } from '@progress/kendo-drawing';
-const { Rect, Point, Size, transform } = geometry;
-import Random from "../components/Random.vue";
+// https://nuxt.com/docs/guide/concepts/vuejs-development#composition-api
+import { VueFlow } from '@vue-flow/core';
+import { ref } from 'vue';
+import Card from '../components/Card.vue';
+import '~/assets/vueflow-style.css'
 
-const path = new Path({
-    stroke: {
-        color: "#9999b6",
-        width: 2
-    }
-});
-
-
+const elements = ref([
+    {
+        id: '1',
+        type: 'custom',
+        data: { name: 'QF1' },
+        position: { x: 0, y: 0 },
+    },
+    {
+        id: '2',
+        type: 'custom',
+        data: { name: 'QF2' },
+        position: { x: 100, y: 0 },
+    },
+    {
+        id: 'e1-2',
+        source: '1',
+        target: '2',
+    },
+]);
 </script>
+
+<style module="style">
+.container {
+    height: 100vh;
+}
+</style>
+  
