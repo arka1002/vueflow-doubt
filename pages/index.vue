@@ -13,7 +13,7 @@
 import { VueFlow } from '@vue-flow/core';
 import { ref } from 'vue';
 import Card from '../components/Card.vue';
-import '~/assets/vueflow-style.css'
+import '~/node_modules/@vue-flow/core/dist/style.css'
 
 const elements = ref([
     {
